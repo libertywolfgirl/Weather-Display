@@ -15,7 +15,8 @@ window.addEventListener("load", () => {
         })
         .then(data => {
           console.log(data);
-          const { temp_f, temp_c } = data.current;
+          const { temp_f, temp_c, condition } = data.current;
+          console.log(temp_f, temp_c, condition);
         });
     });
   }
