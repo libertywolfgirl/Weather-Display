@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
   );
   let temperatureDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
+  let img = new Image();
+  let iconImage = document.querySelector('.icon');
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -28,14 +30,9 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = temp_f;
           temperatureDescription.textContent = text;
           locationTimezone.textContent = `${name}, ${region}`;
-          document.querySelector('.icon')
+          iconImage.textContent = icon;
         });
     });
     
-  }
-  
-  function setIcons(icon, iconID) {
-    const skycons = new skycons({color: "white"});
-    //const currentIcon = 
   }
 });
