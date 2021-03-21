@@ -41,7 +41,7 @@ window.addEventListener("load", () => {
             if (temperatureSpan.textContent === "F") {
               temperatureSpan.textContent = "C";
               temperatureDegree.textContent = temp_c;
-            } else {
+            } else if (temperatureSpan.textContent === "C") {
               temperatureSpan.textContent = "F";
               temperatureDegree.textContent = temp_f;
             }

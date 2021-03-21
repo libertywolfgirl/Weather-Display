@@ -25,15 +25,15 @@ body {
 .temperature {
   flex-direction: column;
 }
-.degree-section {
+.degree-section, .temperature-feels-like {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.degree-section span {
+.degree-section span, .temperature-feels-like span {
   margin: 10px;
   font-size: 30px;
 }
-.degree-section h2 {
+.degree-section h2, .temperature-feels-like h2 {
   font-size: 40px;
 }
