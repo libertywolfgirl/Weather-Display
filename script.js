@@ -4,12 +4,13 @@ window.addEventListener("load", () => {
   let temperatureDescription = document.querySelector(
     ".temperature-description"
   );
-  let temperatureDegree = document.querySelector(".temperature-degree");
-  let feelsLikeDegree = document.querySelector(".feels-like-degree");
-  let locationTimezone = document.querySelector(".location-timezone");
-  let image = document.createElement("img");
-  let temperatureSection = document.querySelector(".temperature");
-  let temperatureSpan = document.querySelector(".temperature span");
+  const temperatureDegree = document.querySelector(".temperature-degree");
+  const feelsLikeDegree = document.querySelector(".feels-like-degree");
+  const locationTimezone = document.querySelector(".location-timezone");
+  const image = document.createElement("img");
+  const temperatureSection = document.querySelector(".temperature");
+  const temperatureSpan = document.querySelector(".temperature span");
+  const feelsLikeSpan = document.querySelector(".temperature-feels-like span");
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -43,10 +44,12 @@ window.addEventListener("load", () => {
             if (temperatureSpan.textContent === "F") {
               temperatureSpan.textContent = "C";
               temperatureDegree.textContent = temp_c;
+              feelsLikeSpan.textContent = "C";
               feelsLikeDegree.textContent = feelslike_c;
             } else {
               temperatureSpan.textContent = "F";
               temperatureDegree.textContent = temp_f;
+              feelsLikeSpan.textContent = "F";
               feelsLikeDegree.textContent = feelslike_f;
             }
           });
