@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
           return response.json();
         })
         .then(data => {
-          console.log(data);
+          //console.log(data);
           const { temp_f, temp_c } = data.current;
           const { text, icon } = data.current.condition;
           const { name, region } = data.location;
