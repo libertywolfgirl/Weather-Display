@@ -6,8 +6,7 @@ window.addEventListener("load", () => {
   );
   let temperatureDegree = document.querySelector(".temperature-degree");
   let locationTimezone = document.querySelector(".location-timezone");
-  let img = new Image();
-  let iconImage = document.querySelector('.icon');
+  let image = document.createElement('img');
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -30,7 +29,8 @@ window.addEventListener("load", () => {
           temperatureDegree.textContent = temp_f;
           temperatureDescription.textContent = text;
           locationTimezone.textContent = `${name}, ${region}`;
-          iconImage.textContent = icon;
+          image.src = icon;
+          document.getElementById('icon').appendChild(image);
         });
     });
     
