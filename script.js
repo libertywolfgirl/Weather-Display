@@ -19,6 +19,7 @@ window.addEventListener("load", () => {
           return response.json();
         })
         .then(data => {
+          console.log(data);
           const { temp_f, temp_c } = data.current;
           const { text } = data.current.condition;
           const { name, region } = data.location;
@@ -29,5 +30,11 @@ window.addEventListener("load", () => {
           locationTimezone.textContent = `${name}, ${region}`;
         });
     });
+    
+  }
+  
+  function setIcons(icon, iconID) {
+    const skycons = new skycons({color: "white"});
+    //const currentIcon = 
   }
 });
